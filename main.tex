@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper]{report}
+
+% Formatting rules.
+\input{formatting/formatting} 
+
+% Cover page
+\input{front_matter/cover}
+
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{empty}
+	
+	% Abstract
+	\begin{abstract}
+		\thispagestyle{plain}
+		\input{front_matter/abstract}
+	\end{abstract}
+	
+	% Table of contents
+	{
+		\cleardoublepage
+		\hypersetup{linkcolor=black}
+		\pagenumbering{gobble}
+		\tableofcontents
+		\cleardoublepage
+	}
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	
+	% Chapters
+	\input{chapters/_list}
+	
+	% Bibliography
+	\cleardoublepage
+	\printbibliography[heading=bibintoc]
+	
+\end{document}
