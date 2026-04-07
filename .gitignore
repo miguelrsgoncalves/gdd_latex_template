@@ -1,0 +1,20 @@
+## LaTeX compile files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.pyg
+*.snm
+*.nav
+*.vrb
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+## Bibliography files
+*.bcf
+*.run.xml
