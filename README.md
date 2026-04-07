@@ -1,0 +1,1 @@
+# gdd_latex_template
