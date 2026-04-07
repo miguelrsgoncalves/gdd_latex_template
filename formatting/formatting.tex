@@ -1,0 +1,65 @@
+% Core Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+% Page Layout
+\usepackage{geometry}
+\geometry{margin=1.4cm} 
+
+% Visuals
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\graphicspath{ {./images/} }
+
+% Citations
+\usepackage[style=numeric,sorting=none,backend=biber]{biblatex}
+\addbibresource{bibliography/bibliography.bib}
+
+% Styling
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+\usepackage{titling}
+
+% Code Snippets
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{backcolour}{rgb}{0.96,0.96,0.96}
+\lstset{
+	backgroundcolor=\color{backcolour},   
+	basicstyle=\ttfamily\footnotesize,
+	breaklines=true,
+	numbers=left
+}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+% Chapters
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\thechapter}{1em}{}                       
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+\setlength{\cftchapnumwidth}{2.75em}
+
+% Custom Commands: 
+
+\newcommand{\subtitle}[1]{
+	\posttitle{
+		\par\end{center}
+	\begin{center}\large#1\end{center}
+	\vskip0.5em}
+}
+
+\newcommand{\addchapter}[2]{
+	\chapter{#1}
+	\input{chapters/#2}
+}
