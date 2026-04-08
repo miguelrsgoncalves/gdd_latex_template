@@ -53,6 +53,12 @@ To add a new chapter, go to chapters/ and create a new .tex file, then, in _list
 \addchapter{Gameplay Mechanics}{gameplay_mechanics}
 ```
 
+Using the command with an empty first argument will add the content without creating a seperate chapter:
+
+```latex
+\addchapter{}{gameplay_mechanics}
+```
+
 This automatically handles correct generation of the chapter and addition to the document.
 
 ## Compilation Requirements
