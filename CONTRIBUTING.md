@@ -14,7 +14,7 @@ This document summarizes the most important points for people interested in cont
 
 Report bugs here [here](https://github.com/miguelrsgoncalves/gdd_latex_template/issues).
 
-Notably, please include a your LaTeX editor, compiler and all settings related to the document build process.
+Notably, please include your LaTeX editor, compiler and all settings related to the document build process.
 
 Bugs are anything that makes it impossible for the document to be built correctly, either from crashes, formatting problems or warning messages.
 
