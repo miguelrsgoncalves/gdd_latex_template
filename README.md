@@ -58,3 +58,5 @@ This automatically handles correct generation of the chapter and addition to the
 ## Compilation Requirements
 
 The template requires Biber as the bibliography compiler to sucessfully compile, although you can easily change it by digging the formatting.tex file.
+
+**Note:** This template was only used and tested in TexStudio, with TexLive, but it should work in other editors and compilers.
