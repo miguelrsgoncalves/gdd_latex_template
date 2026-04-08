@@ -117,6 +117,16 @@
 % Logic & Custom Commands
 
 \newcommand{\addchapter}[2]{
-	\chapter{#1}
-	\input{chapters/#2}
+	\ifstrempty{#1}{
+		\cleardoublepage
+		\input{chapters/#2}
+		\cleardoublepage
+	}{
+		\chapter{#1}
+		\input{chapters/#2}
+	}
+}
+
+\newcommand{\placeholder}[2]{
+	\input{placeholders/#1}
 }
