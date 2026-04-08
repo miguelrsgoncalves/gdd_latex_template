@@ -1,0 +1,17 @@
+% Code block
+\begin{lstlisting}[caption=code.cpp]
+	// Code goes inside here
+	
+	#include <iostream>
+	#include "Vector3.h"
+	
+	// Calculates movement based on input delta
+	void Player::Update(float deltaTime) {
+		Vector3 input = GetInput(); // Read WASD
+		
+		if (input.Magnitude() > 0) {
+			std::cout << "Player is moving!" << "\n";
+			transform.Translate(input * baseSpeed * deltaTime);
+		}
+	}
+\end{lstlisting}
