@@ -26,11 +26,11 @@ This project is organized into modular components, where all files are stored in
 ├── bibliography/
 │   └── bibliography.bib             # Bibliography
 ├── templates/
-│   ├── template1.tex                 # Templates are stored in this folder
+│   ├── template1.tex                # Templates are stored in this folder
 │   ├── template2.tex
 │   └── etc...
 └── placeholders/
-    ├── placeholder1.tex                 # Placeholders are stored here. They are used for the default tempalte build
+    ├── placeholder1.tex             # Placeholders are stored here. They are used for the default tempalte build
     ├── placeholder2.tex
     └── etc...
 
