@@ -1,35 +1,76 @@
-\documentclass[11pt,a4paper]{report}
+%———————————————————————————————————————————————————————————————————————————————%
+% GDD LaTeX Template															%
+%———————————————————————————————————————————————————————————————————————————————%
+% MIT License																	%
+%																				%
+% Copyright (c) 2026 MRSG														%
+%																				%
+% Permission is hereby granted, free of charge, to any person obtaining a copy	%
+% of this software and associated documentation files (the "Software"), to deal	%
+% in the Software without restriction, including without limitation the rights	%
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell		%
+% copies of the Software, and to permit persons to whom the Software is			%
+% furnished to do so, subject to the following conditions:						%
+%																				%
+% The above copyright notice and this permission notice shall be included in all%
+% copies or substantial portions of the Software.								%
+%																				%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR	%
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,		%
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE	%
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER		%
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,	%
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE	%
+% SOFTWARE.																		%
+%———————————————————————————————————————————————————————————————————————————————%
 
-% Formatting rules.
+%———————————————————————————————————————————————————————————————————————————————%
+%  	QUICK USAGE GUIDE                                                           %
+%———————————————————————————————————————————————————————————————————————————————%
+%  	METADATA:                                                                 	%
+%     	• Update title, author, and version in: front_matter/metadata.tex       %
+%                                                                               %
+%	CHAPTERS:                                                                 	%
+%     	• Create a new .tex file in the 'chapters/' folder.                   	%
+%     	• Add it to 'chapters/_list.tex' using: \addchapter{Title}{file_name}  	%
+%                                                                               %
+%	IMAGES & CITATIONS:                                                      	%
+% 		• Place all visuals in 'images/'.                                       %
+% 		• Add bib entries to 'bibliography/bibliography.bib'.                   %
+%                                                                               %
+%	COMPILATION:                                                              	%
+% 		• Use Biber for bibliographies.     									%
+%———————————————————————————————————————————————————————————————————————————————%
+
+\documentclass[12pt,a4paper]{report}
+
 \input{formatting/formatting} 
-
-% Cover page
-\input{front_matter/cover}
+\input{front_matter/metadata}
 
 \begin{document}
 	
-	\maketitle
-	\thispagestyle{empty}
+	% Cover
+	\input{front_matter/cover}
 	
 	% Abstract
 	\begin{abstract}
-		\thispagestyle{plain}
 		\input{front_matter/abstract}
 	\end{abstract}
 	
-	% Table of contents
+	% Table of Contents
 	{
 		\cleardoublepage
 		\hypersetup{linkcolor=black}
 		\pagenumbering{gobble}
-		\tableofcontents
+		\input{front_matter/_table_of_contents_list}
 		\cleardoublepage
 	}
 	
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
+	\pagestyle{fancy}
 	
-	% Chapters
+	% Main Body
 	\input{chapters/_list}
 	
 	% Bibliography
