@@ -1,0 +1,19 @@
+\begingroup
+	\makeatletter
+	\let\clearpage\relax
+	\let\cleardoublepage\relax
+	\let\ps@plain\ps@empty
+	\makeatother
+	
+	\pagestyle{empty}
+	\thispagestyle{empty}
+	
+	\tableofcontents
+	\vspace{2em}
+	\listoffigures
+	\vspace{2em}
+	\listoftables
+	\vspace{2em}
+	\lstlistoflistings
+	\newpage 
+\endgroup
