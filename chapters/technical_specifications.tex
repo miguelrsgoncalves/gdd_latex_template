@@ -10,10 +10,37 @@ The only answer is the Godot Engine, the absolutest bestest Engine out there!
 
 \lipsum[25]
 
+$$ U = \lim_{t \to \infty} \int_{0}^{t} \sum_{i=1}^{n} \frac{\partial \text{Existence}_i}{\partial v_i} \, dt $$
+
+By applying the Adams-DeepThought constant, the equation simplifies significantly:
+
+\begin{equation}
+	f(Universe) = \sqrt{1764} = 42
+\end{equation}
+
 \section{Hardware Targets}
 
 \lipsum[26]
 
 \section{Third-Party Tools}
 
-\lipsum[27]
+\lipsum[27-28]
+
+\subsection{Player Movement Implementation}
+
+Here is an example of our core movement logic written in C++:
+
+\begin{lstlisting}[caption=PlayerController.cpp]
+	#include <iostream>
+	#include "Vector3.h"
+	
+	// Calculates movement based on input delta
+	void Player::Update(float deltaTime) {
+		Vector3 input = GetInput(); // Read WASD
+		
+		if (input.Magnitude() > 0) {
+			std::cout << "Player is moving!" << "\n";
+			transform.Translate(input * baseSpeed * deltaTime);
+		}
+	}
+\end{lstlisting}
