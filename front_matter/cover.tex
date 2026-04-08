@@ -1,5 +1,62 @@
-% Document and Company/Author info
-\input{front_matter/metadata}
-
-% Date of the last update. Automatically updates to the compilation date.
-\date{\today}
+\begin{titlepage}
+	\pagenumbering{alph}
+	\centering
+	\sffamily
+	
+	% Franchise
+	\vspace*{-1cm} 
+	\ifdefempty{\gddfranchise}{}{
+		{\scshape\textls[150]{\large \gddfranchise}} \par
+		\vspace{0.2cm}
+	}
+	{\Large \textbf{\gddauthor}} \par
+	
+	\vspace{2.5cm}
+	
+	% Title
+	\hrule height 0.5pt
+	\vspace{0.5cm}
+	
+	\begin{minipage}[c][4cm][c]{\textwidth}
+		\centering
+		{\Huge \bfseries \gddtitle \par}
+		\ifdefempty{\gddsubtitle}{}{
+			\vspace{0.5cm}
+			{\Large \textit{\color{black!70} \gddsubtitle} \par}
+		}
+	\end{minipage}
+	
+	\vspace{0.5cm}
+	\hrule height 0.5pt
+	
+	% Cover Image
+	\vfill
+	\ifdefempty{\coverimage}{}{
+		\includegraphics[width=0.9\textwidth, height=0.5\textheight, keepaspectratio]{\coverimage} 
+	}
+	\vfill
+	
+	% Footer
+	\begin{minipage}[b]{\textwidth}
+		% Logo 
+		\begin{minipage}[b]{0.45\textwidth}
+			\begin{flushleft}
+				\ifdefempty{\coverlogo}{}{
+					\includegraphics[width=2cm, height=2cm, keepaspectratio]{\coverlogo}
+				}
+			\end{flushleft}
+		\end{minipage}
+		\hfill
+		% Metadata
+		\begin{minipage}[b]{0.45\textwidth}
+			\begin{flushright}
+				\small
+				\vspace*{0.5cm}
+				{\color{black!60} Version} \textbf{\gddversion} \\[0.25cm]
+				{\color{black!60} Released} \textbf{\gdddate}
+			\end{flushright}
+		\end{minipage}
+	\end{minipage}
+	
+\end{titlepage}
+\clearpage
