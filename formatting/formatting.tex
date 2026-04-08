@@ -119,11 +119,11 @@
 \newcommand{\addchapter}[2]{
 	\ifstrempty{#1}{
 		\cleardoublepage
-		\input{chapters/#2}
+		\input{chapters/#1}
 		\cleardoublepage
 	}{
-		\chapter{#1}
-		\input{chapters/#2}
+		\chapter{#2}
+		\input{chapters/#1}
 	}
 }
 
