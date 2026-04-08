@@ -12,6 +12,7 @@
 *.nav
 *.vrb
 *.fls
+*.lol
 *.fdb_latexmk
 *.synctex.gz
 
