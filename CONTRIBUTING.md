@@ -46,5 +46,3 @@ This repo follows the PR workflow, to start contributing follow the steps:
 For issue resolutions, please include the issue link in your PR so it can be automatically closed once the PR is merged.
 
 Thanks for your interest in contributing!
-
-— MRSG
