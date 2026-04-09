@@ -61,11 +61,11 @@
 	
 	% Table of Contents
 	{
-		\cleardoublepage
+		\newpage
 		\hypersetup{linkcolor=black}
 		\pagenumbering{gobble}
 		\input{front_matter/_table_of_contents_list}
-		\cleardoublepage
+		\newpage
 	}
 	
 	\pagenumbering{arabic}
@@ -76,7 +76,7 @@
 	\input{content/_list}
 	
 	% Bibliography
-	\cleardoublepage
+	\newpage
 	\printbibliography[heading=bibintoc]
 	
 \end{document}

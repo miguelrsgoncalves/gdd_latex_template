@@ -134,9 +134,9 @@
 \newcommand{\addcontent}[2][false]{
 	\str_if_eq:nnTF {#1} {true}
 	{
-		\cleardoublepage
+		\newpage
 		\input{content/#2}
-		\cleardoublepage
+		\newpage
 	}
 	{
 		\input{content/#2}
