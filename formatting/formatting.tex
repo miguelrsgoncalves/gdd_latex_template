@@ -131,17 +131,13 @@
 	\input{content/#1}
 }
 
-\newcommand{\addcontent}[2][false]{
-	\str_if_eq:nnTF {#1} {true}
-	{
-		\newpage
-		\input{content/#2}
-		\newpage
-	}
-	{
-		\input{content/#2}
-	}
+\newcommand{\addcontent}[2]{
+	\tl_if_in:nnT {#2} { b } { \newpage }
+	\input{content/#1}
+	\tl_if_in:nnT {#2} { a } { \newpage }
 }
+
+\ExplSyntaxOff
 
 \newcommand{\placeholder}[1]{
 	\input{placeholders/#1}
