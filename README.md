@@ -16,12 +16,12 @@ This project is organized into modular components, where all files are stored in
 │   ├── cover.tex                    # The cover of the document
 │   ├── abstract.tex                 # The abstract
 │   └── _table_of_contents_list.tex  # List of Lists to show as Table of Contents
-├── chapters/                        
-│   ├── chapter1.tex                 # All your chaptors will be stored here in this folder
-│   ├── chapter2.tex
-│   ├── chapter3.tex
+├── content/                         # All of your content will be stored here in this folder
+│   ├── file_1.tex                   
+│   ├── file_2.tex
+│   ├── file_3.tex
 │   ├── etc...
-│   └── _list.tex                    # When a new chapter is created it needs to be added in this list
+│   └── _list.tex                    # When a new file is created it needs to be added in this list
 ├── images/                          # Where to store images
 ├── bibliography/
 │   └── bibliography.bib             # Bibliography
@@ -39,36 +39,46 @@ This project is organized into modular components, where all files are stored in
 ## Using this template
 
 ### 1. Define Your Metadata
-Open `main.tex`, this is where you set the global variables that populate the cover and footers:
+
+To set document metadata edit the front_matter/metadata.tex file.
 
 ```latex
-\newcommand{\gddtitle}{Project Name}
-\newcommand{\gddsubtitle}{Tactical Espionage Action}
-\newcommand{\gddauthor}{Studio Name}
-\newcommand{\gddfranchise}{}
-\newcommand{\gddversion}{1.0.4}
-\newcommand{\gdddate}{\today}
+
+\gdef\gddtitle{GDD LaTeX Template}
+\gdef\gddsubtitle{The best one there is!}
+\gdef\gddfranchise{Franchise Name}
+\gdef\gddauthor{Company/Author Name}
+\gdef\gddversion{1.1.2}
+\gdef\gdddate{\today}
+
+\gdef\coverimage{example-image-a}
+\gdef\coverlogo{example-image-b}
+
 ```
 
 **Note:** Leaving the date as \today will set the date to the compiliation date automatically.
 
-**Note:** Leaving optional entries empty will make them dissapear.
+**Note:** Leaving optional entries empty will not render them.
 
 ## Adding Content
 
-To add a new chapter, go to chapters/ and create a new .tex file, then, in _list.tex, use the custom command:
+To add new content, go to content/ and create a new .tex file, then, in _list.tex, use the command:
 
+**To add chapters:**
 ```latex
-\addchapter{Gameplay Mechanics}{gameplay_mechanics}
+\addchapter{file_name}{Chapter Title}
 ```
 
-Using the command with an empty first argument will add the content without creating a seperate chapter:
+**To add content:**
+
+The second argument can receive "b" and/or "a" to insert \newpage before and/or after respectively.
 
 ```latex
-\addchapter{}{gameplay_mechanics}
+\addcontent{file_name}{}
+\addcontent{file_name}{b}
+\addcontent{file_name}{a}
+\addcontent{file_name}{ba}
 ```
-
-This automatically handles correct generation of the chapter and addition to the document.
 
 ## Compilation Requirements
 
