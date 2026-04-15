@@ -1,4 +1,4 @@
-# GDD LaTeX Template
+![GDD LaTeX Template Logo](images/gdd_latex_template_logo.png "GDD LaTeX Template Logo")
 
 GDD LaTeX Template is the open source template for your Game Design Document! This template was built so that it stays out of your way while providing you with all the tools, formatting and project structure needed out of the box.
 
