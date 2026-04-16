@@ -6,7 +6,7 @@ GDD LaTeX Template is the open source template for your Game Design Document! Th
 
 This project is organized into modular components, where all files are stored inside each respective folder. Knowing where each file you need to edit is crucial.
 
-```text
+```
 .
 ├── main.tex                         # The main tex file
 ├── formatting/
@@ -52,7 +52,7 @@ To set document metadata edit the front_matter/metadata.tex file.
 \gdef\gddsubtitle{The best one there is!}
 \gdef\gddfranchise{Franchise Name}
 \gdef\gddauthor{Company/Author Name}
-\gdef\gddversion{1.1.2}
+\gdef\gddversion{1.2.0}
 \gdef\gdddate{\today}
 
 \gdef\coverimage{gdd_latex_template_logo}
@@ -88,7 +88,10 @@ The second argument can receive "b" and/or "a" to insert \newpage before and/or 
 
 The template makes use of a number of custom commands to make writting easier.
 
-- **\textbfit{}:** Add bold and italic to text with one command.
+```latex
+% Add bold and italic text with one command
+\textbfit{text}
+```
 
 ## Compilation Requirements
 
