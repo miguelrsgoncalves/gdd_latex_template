@@ -38,7 +38,11 @@ This project is organized into modular components, where all files are stored in
 
 ## Using this template
 
-### 1. Define Your Metadata
+### 1. Main File
+
+The main file is the main.tex, this is the document that gets compiled and exported as a PDF. The PDF gets its name from this file, so if you want the PDF to be exported with a different name change the main.tex's name.
+
+### 2. Define your Metadata
 
 To set document metadata edit the front_matter/metadata.tex file.
 
@@ -51,8 +55,8 @@ To set document metadata edit the front_matter/metadata.tex file.
 \gdef\gddversion{1.1.2}
 \gdef\gdddate{\today}
 
-\gdef\coverimage{example-image-a}
-\gdef\coverlogo{example-image-b}
+\gdef\coverimage{gdd_latex_template_logo}
+\gdef\coverlogo{gdd_latex_template_logo}
 
 ```
 
@@ -79,6 +83,12 @@ The second argument can receive "b" and/or "a" to insert \newpage before and/or 
 \addcontent{file_name}{a}
 \addcontent{file_name}{ba}
 ```
+
+## Custom Commands
+
+The template makes use of a number of custom commands to make writting easier.
+
+- **\textbfit{}:** Add bold and italic to text with one command.
 
 ## Compilation Requirements
 
