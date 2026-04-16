@@ -9,8 +9,8 @@ This project is organized into modular components, where all files are stored in
 ```
 .
 ├── main.tex                         # The main tex file
-├── formatting/
-│   └── formatting.tex               # The formatting
+├── preamble/
+│   └── preamble.tex                 # The formatting and commands
 ├── front_matter/
 │   ├── metadata.tex                 # The document data: Title, company/author, subtitle, etc...
 │   ├── cover.tex                    # The cover of the document
@@ -21,6 +21,7 @@ This project is organized into modular components, where all files are stored in
 │   ├── file_2.tex
 │   ├── file_3.tex
 │   ├── etc...
+│   ├── _definitions.tex             # Create definitions to be used globaly
 │   └── _list.tex                    # When a new file is created it needs to be added in this list
 ├── images/                          # Where to store images
 ├── bibliography/
@@ -55,10 +56,20 @@ To set document metadata edit the front_matter/metadata.tex file.
 \gdef\gddversion{1.2.0}
 \gdef\gdddate{\today}
 
-\gdef\coverimage{gdd_latex_template_logo}
-\gdef\coverlogo{gdd_latex_template_logo}
+\gdef\gddcoverimage{gdd_latex_template_logo}
+\gdef\gddlogo{gdd_latex_template_logo}
 
 ```
+
+Metadata entries can be used in the content using their respective commands, for example:
+
+```latex
+
+This document serves as the comprehensive Game Design Document (GDD) for \textbf{\gddtitle}.
+
+```
+
+This makes it usefull
 
 **Note:** Leaving the date as \today will set the date to the compiliation date automatically.
 
