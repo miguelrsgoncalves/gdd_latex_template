@@ -2,9 +2,9 @@
 
 GDD LaTeX Template is the open source template for your Game Design Document! This template was built so that it stays out of your way while providing you with all the tools, formatting and project structure needed out of the box.
 
-## Project Structure
+## Template Structure
 
-This project is organized into modular components, where all files are stored inside each respective folder. Knowing where each file you need to edit is crucial.
+This template is organized into modular components, where all files are stored inside each respective folder. Knowing where to find each file you need to edit is crucial:
 
 ```
 .
@@ -53,7 +53,7 @@ To set document metadata edit the front_matter/metadata.tex file.
 \gdef\gddsubtitle{The best one there is!}
 \gdef\gddfranchise{Franchise Name}
 \gdef\gddauthor{Company/Author Name}
-\gdef\gddversion{1.2.0}
+\gdef\gddversion{1.2.1}
 \gdef\gdddate{\today}
 
 \gdef\gddcoverimage{gdd_latex_template_logo}
@@ -68,8 +68,6 @@ Metadata entries can be used in the content using their respective commands, for
 This document serves as the comprehensive Game Design Document (GDD) for \textbf{\gddtitle}.
 
 ```
-
-This makes it usefull
 
 **Note:** Leaving the date as \today will set the date to the compiliation date automatically.
 
@@ -93,6 +91,25 @@ The second argument can receive "b" and/or "a" to insert \newpage before and/or 
 \addcontent{file_name}{b}
 \addcontent{file_name}{a}
 \addcontent{file_name}{ba}
+```
+
+### Definitions
+
+Definitions are useful commands that enable you to create definitions to be used globaly on the whole document. This way you can create a definition and asign it some text, which will be used all throughout the document, without needing to write it more than once and it can be updated all from a single place.
+
+To create definitions edit the content/_definitions.tex file.
+
+Example:
+
+```latex
+% In content/_definitions.tex
+\gdef\item_name{Cool Ass Item}
+
+% In your content
+The \item_name is a very useful tool!
+
+% Result
+The Cool Ass Item is a very useful tool!
 ```
 
 ## Custom Commands
